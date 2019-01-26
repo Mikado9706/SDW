@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .page-footer{
+      padding-top: 0;
+  }
+
+  .page-footer .row{
+      margin-bottom: 0;
+  }
+
+  .social-network{
+      text-align: center;
+  }
+
+.up{
+    height: 52px;
+    text-align: center;
+    position: relative;
+  }
+
+.up a{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    margin-left: -12px;
+  }
+
+  .social-network a{
+      padding: 0 20px;
+  }
+
+  .copyrights{
+    font-size: 1rem;
+  }
+
+  main{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }

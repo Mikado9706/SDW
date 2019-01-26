@@ -4,14 +4,21 @@
         <meta charset="UTF-8">
         <title></title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link href="{{ asset('css/materialize.min.css') }}" rel="stylesheet" media="screen,projection"/>
+        <link href="{{ asset('css/custom.css') }}" rel="stylesheet" media="screen,projection"/>
         {% block stylesheets %}{% endblock %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
+        {% include 'components/header.html.twig' %}
+
         {% block body %}{% endblock %}
-        
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        {% include 'components/footer.html.twig' %}
+
+        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/materialize.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

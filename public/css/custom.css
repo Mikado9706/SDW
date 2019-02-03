@@ -47,3 +47,40 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  .subSelect input {
+    color: white; 
+  }
+
+  /* #leftPannel {
+    margin-left: 1%;
+  }
+
+  #rightPannel {
+    margin-right: 1%;
+  }
+
+  .subRech {
+    background-color: white;   
+  }
+
+  .subRech input {
+    color: #2699FB;
+  } */
+
+  #search_search {
+    color: #2699FB; 
+    border-style: solid; 
+    border-color: #2699FB;
+    border-radius: 5px;
+  }
+
+  #laZoneDeRecherche {
+    position: relative;
+  }
+  #search-button {
+    position: absolute;
+    bottom: -10%;
+    left: 41%;
+    font-style: bold;
+  }

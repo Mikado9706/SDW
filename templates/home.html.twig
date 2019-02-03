@@ -4,17 +4,54 @@
 <main>
     <div class="container">
         <div class="row blue">
-            <div class="col l12">
+            <div id="laZoneDeRecherche" class="col l12">
                 {{ form_start(form) }}
-                {{ form_widget(form.alternation) }}
-                {{ form_widget(form.backToSchool) }}
-                {{ form_widget(form.level) }}
-                {{ form_widget(form.rncp) }}
-                {{ form_widget(form.formation) }}
-                {{ form_widget(form.location) }}
-                {{ form_widget(form.noFormation) }}
-                {{ form_widget(form.noLocation) }}
-                {{ form_widget(form.search) }}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="input-field subSelect col s12 l3">
+                            {{ form_widget(form.alternation) }}
+                        </div>
+                        <div class="input-field subSelect col s12 l3">
+                            {{ form_widget(form.backToSchool) }}
+                        </div>
+                        <div class="input-field subSelect col s12 l3">    
+                            {{ form_widget(form.level) }}
+                        </div>
+                        <div class="input-field subSelect col s12 l3">
+                            {{ form_widget(form.rncp) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l6">
+                            <div class="container-fluid">
+                                <div id="leftPannel" class="row">
+                                    <div class="subSelect input-field col s12">
+                                        {{ form_widget(form.formation) }}
+                                    </div>
+                                    <div class="subSelect input-field col s12">
+                                        {{ form_widget(form.noFormation) }}
+                                    </div>                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l6">
+                            <div class="container-fluid">
+                                <div id="rightPannel" class="row">
+                                    <div class="subSelect input-field col s12">
+                                        {{ form_widget(form.location) }}
+                                    </div>
+
+                                    <div class="subSelect input-field col s12">
+                                        {{ form_widget(form.noLocation) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+                <div id="search-button" class="input-field col s12">
+                    {{ form_widget(form.search) }}
+                </div>
                 {{ form_end(form) }}
             </div>
         </div>

@@ -43,34 +43,45 @@ class SearchType extends AbstractType
                 ])
             ->add('formation', ChoiceType::class, [
                 'choices'  => [
-                    'Bachelor WEB' => 'web_bachelor',
-                    'Master 1 360 Digital' => '360_digital_master1',
-                    'Master 2 360 Digital' => '360_digital_master2'
+                    'Formation' => [
+                        'Bachelor WEB' => 'web_bachelor',
+                        'Master 1 360 Digital' => '360_digital_master1',
+                        'Master 2 360 Digital' => '360_digital_master2'
                     ]
+                ]
                 ])
             ->add('location', ChoiceType::class, [
                 'choices'  => [
-                    'Nice' => 'nice',
-                    'Paris' => 'paris',
-                    'Lille' => 'lille'
-                    ]
+                    'Location' => [
+                        'Nice' => 'nice',
+                        'Paris' => 'paris',
+                        'Lille' => 'lille'
+                    ]       
+                ]
                 ])
             ->add('noFormation', ChoiceType::class, [
                 'choices'  => [
-                    'Bachelor WEB' => 'web_bachelor',
-                    'Master 1 360 Digital' => '360_digital_master1',
-                    'Master 2 360 Digital' => '360_digital_master2'
-                    ]
+                    'Formation non souhaitée' => [
+                        'Bachelor WEB' => 'web_bachelor',
+                        'Master 1 360 Digital' => '360_digital_master1',
+                        'Master 2 360 Digital' => '360_digital_master2'
+                    ]                   
+                ]
                 ])
             ->add('noLocation', ChoiceType::class, [
                 'choices'  => [
-                    'Nice' => 'nice',
-                    'Paris' => 'paris',
-                    'Lille' => 'lille'
+                    'Location non souhaitée' => [
+                        'Nice' => 'nice',
+                        'Paris' => 'paris',
+                        'Lille' => 'lille'
                     ]
+                ]
                 ])
             ->add('search', SubmitType::class, [
-                'label' => 'Rechercher'
+                'label' => 'Rechercher',
+                'attr' => [
+                    'class' => 'btn waves-effect waves-light white'
+                    ]
                 ])
 
         ;

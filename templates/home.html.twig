@@ -22,14 +22,29 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div id="etc-wrapper">
+                            <div id="etc">
+                                <span>...</span>
+                            </div>  
+                        </div>  
+                    </div>
+                    <div class="row">
                         <div class="col l6">
                             <div class="container-fluid">
                                 <div id="leftPannel" class="row">
-                                    <div class="subSelect input-field col s12">
-                                        {{ form_widget(form.formation) }}
+                                    <div class="col s12">
+                                        <div class="subRech">
+                                            <div class="input-field">
+                                                {{ form_widget(form.formation) }}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="subSelect input-field col s12">
-                                        {{ form_widget(form.noFormation) }}
+                                    <div class="col s12">
+                                        <div class="subRech">
+                                            <div  class="input-field">
+                                                {{ form_widget(form.noFormation) }}
+                                            </div>
+                                        </div>
                                     </div>                        
                                 </div>
                             </div>
@@ -37,12 +52,19 @@
                         <div class="col l6">
                             <div class="container-fluid">
                                 <div id="rightPannel" class="row">
-                                    <div class="subSelect input-field col s12">
-                                        {{ form_widget(form.location) }}
+                                    <div class="col s12">
+                                        <div class="subRech">
+                                            <div class="input-field">
+                                                {{ form_widget(form.location) }} 
+                                            </div>
+                                        </div> 
                                     </div>
-
-                                    <div class="subSelect input-field col s12">
-                                        {{ form_widget(form.noLocation) }}
+                                    <div class="col s12">
+                                        <div class="subRech">
+                                            <div class="input-field">
+                                                {{ form_widget(form.noLocation) }}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

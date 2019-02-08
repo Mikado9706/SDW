@@ -47,26 +47,20 @@ body {
     display: flex;
     justify-content: center;
   }
-
   .subSelect input {
+    border-bottom: 3px solid white !important;
     color: white; 
   }
 
-  /* #leftPannel {
-    margin-left: 1%;
-  }
-
-  #rightPannel {
-    margin-right: 1%;
-  }
-
   .subRech {
-    background-color: white;   
+    background-color: white;
+    padding-left: 1rem;   
   }
 
   .subRech input {
     color: #2699FB;
-  } */
+    border-bottom: 0 !important;
+  }
 
   #search_search {
     color: #2699FB; 
@@ -77,10 +71,25 @@ body {
 
   #laZoneDeRecherche {
     position: relative;
+    padding: 0 5rem;
   }
+
   #search-button {
     position: absolute;
     bottom: -10%;
     left: 41%;
     font-style: bold;
+  }
+  
+  #etc-wrapper {
+    position: absolute;
+    width: 100%;
+  }
+
+  #etc {
+    border: 2px solid #fff;
+    border-radius: 25px;
+    width: 45px;
+    height: 45px;
+    float: right;
   }

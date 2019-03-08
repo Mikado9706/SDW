@@ -106,4 +106,15 @@ body {
     text-align: center;
     line-height: 20px;
     font-size: 30px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .etc.active{
+    background: transparent;
+    color: #fff;
+  }
+
+  .disabled{
+    display: none;
   }

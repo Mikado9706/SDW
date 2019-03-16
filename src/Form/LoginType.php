@@ -23,9 +23,11 @@ class LoginType extends AbstractType
                 ]
             ])
             ->add('search', SubmitType::class, [
-                'label' => "S'inscrire"
-            ])
-
+                'label' => "Se connecter",
+                'attr' => [
+                    'class' => 'btn waves-effect waves-light white validationForm'
+                    ]
+                ])
         ;
     }
 }

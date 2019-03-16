@@ -80,7 +80,7 @@ class SearchType extends AbstractType
             ->add('search', SubmitType::class, [
                 'label' => 'Rechercher',
                 'attr' => [
-                    'class' => 'btn waves-effect waves-light white'
+                    'class' => 'btn waves-effect waves-light white validationForm'
                     ]
                 ])
 

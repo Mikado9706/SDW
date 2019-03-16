@@ -62,7 +62,7 @@ body {
     border-bottom: 0 !important;
   }
 
-  #search_search {
+  .validationForm {
     color: #2699FB; 
     border-style: solid; 
     border-color: #2699FB;
@@ -117,4 +117,8 @@ body {
 
   .disabled{
     display: none;
+  }
+
+  .lien-connec {
+    color: #fff;
   }

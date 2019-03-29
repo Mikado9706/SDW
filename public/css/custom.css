@@ -146,6 +146,8 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .input-field input[type=text]:focus + label {
   color: #000;
 
+}
+
 .boutonValider{
   color: #2699FB; 
   border-style: solid; 
@@ -153,3 +155,5 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
   border-radius: 5px;
   margin-top: 20px;
 }
+
+

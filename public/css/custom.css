@@ -1,135 +1,146 @@
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+main {
+  flex: 1 0 auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
-  .page-footer{
-      padding-top: 0;
-  }
+.page-footer{
+  padding-top: 0;
+}
 
-  .page-footer .row{
-      margin-bottom: 0;
-  }
+.page-footer .row{
+  margin-bottom: 0;
+}
 
-  .social-network{
-      text-align: center;
-  }
+.social-network{
+  text-align: center;
+}
+
+.social-network a{
+  padding: 0 20px;
+}
 
 .up{
-    height: 52px;
-    text-align: center;
-    position: relative;
-  }
+  height: 52px;
+  text-align: center;
+  position: relative;
+}
 
 .up a{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    margin-left: -12px;
-  }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  margin-left: -12px;
+}
 
-  .social-network a{
-      padding: 0 20px;
-  }
 
-  .copyrights{
-    font-size: 1rem;
-  }
+.copyrights{
+  font-size: 1rem;
+}
 
-  main{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-  .subSelect input {
-    border-bottom: 3px solid white !important;
-    color: white; 
-  }
+.subSelect input {
+  border-bottom: 3px solid white !important;
+  color: white; 
+}
 
-  .subRech {
-    background-color: white;
-    padding-left: 1rem;   
-  }
+.subRech {
+  background-color: white;
+  padding-left: 1rem;   
+}
 
-  .subRech input {
-    color: #2699FB;
-    border-bottom: 0 !important;
-  }
+.subRech input {
+  color: #2699FB;
+  border-bottom: 0 !important;
+}
 
-  .validationForm {
-    color: #2699FB; 
-    border-style: solid; 
-    border-color: #2699FB;
-    border-radius: 5px;
-  }
+.validationForm {
+  color: #2699FB; 
+  border-style: solid; 
+  border-color: #2699FB;
+  border-width: 2px;
+  border-radius: 5px;
+  line-height: normal;
+  height: auto;
+  padding: 10px 20px;
+  font-weight: 500;
+}
 
-  .form-container{
-    padding: 0 5rem!important;
-    margin: 0 0 20px;
-  }
+.form-container{
+  padding: 0 5rem!important;
+  margin: 20px 0;
+}
 
-  .form-container>.container-fluid>.row{
-    margin-bottom: 0;
-  }
+.form-container>.container-fluid>.row{
+  margin-bottom: 0;
+}
 
-  .search-section{
-    margin-bottom: -35px;
-  }
+.search-section{
+  margin-bottom: -35px;
+  text-align: center;
+  margin-top: 20px;
+}
 
-  .search-button {
-    text-align: center;
-  }
-  
 .etc-container{
   height: 0;;
 }
 
-  .etc-wrapper {
-    float: right;
-    margin-top: 15px;
-    margin-right: 15px;
-  }
+.etc-wrapper {
+  float: right;
+  margin-top: 15px;
+  margin-right: 15px;
+}
 
-  .etc {
-    border: 2px solid #fff;
-    font-weight: bold;
-    background: #fff;
-    color: #2196F3;
-    border-radius: 25px;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    position: relative;
-  }
+.etc {
+  border: 2px solid #fff;
+  font-weight: bold;
+  background: #fff;
+  color: #2196F3;
+  border-radius: 25px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+}
 
-  .etc.active{
-    background: transparent;
-    color: #fff;
-  }
+.etc.active{
+  background: transparent;
+  color: #fff;
+}
 
-  .disabled{
-    display: none;
-  }
+.disabled{
+  display: none;
+}
 
-<<<<<<< HEAD
-  .lien-connec {
-    color: #fff;
-  }
-=======
-  .text-container{
-    background-color: #fff;
-    padding: 1px 20px 0 20px!important;
-    margin-top: 20px;
-  }
+.lien-connec {
+  color: #fff;
+}
+.text-container{
+  background-color: #fff;
+  padding: 1px 20px 0 20px!important;
+  margin-top: 20px;
+}
+
+.text-container .input-field{
+  margin: 0;
+}
+
+.text-container .input-field>label:not(.label-icon).active{
+  color: white;
+  font-size: 20px;
+  margin-top: -10px;
+  line-height: 20px;
+}
 
 .text-container label{
   color: #2196F3
@@ -147,4 +158,7 @@ a{
 .link{
   margin: 30px 0 10px;
 }
->>>>>>> 9d4fb2b16530dbd4da94b7575cb26641fc09b91d
+
+.link .input-field{
+  margin: 0;
+}

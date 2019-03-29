@@ -5,14 +5,14 @@
     <div class="container">
         <div class="row blue">
             {{ form_start(form) }}
-            <div class="col l12 form-container">                
+            <div class="col l12 form-container link">                
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col s12 l6 input-field">
-                            <a class="lien-connec" href="{{ path('forgottenPassword') }}">Mot de passe oublié ?</a>       
+                            <a href="{{ path('forgottenPassword') }}">Mot de passe oublié ?</a>       
                         </div>
                         <div class="col s12 l6 input-field">
-                            <a class="lien-connec" href="{{ path('signup') }}">Pas encore inscrit ?</a>      
+                            <a href="{{ path('signup') }}">Pas encore inscrit ?</a>      
                         </div>
                     </div>
                 </div>
@@ -21,28 +21,18 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col l6">
-                            <div class="container-fluid">
-                                <div id="leftPannel" class="row">
-                                    <div class="col s12">
-                                        <div class="subRech">
-                                            <div class="input-field">
-                                                {{ form_widget(form.username) }}
-                                            </div>
-                                        </div>        
-                                    </div>
+                            <div class="text-container">
+                                <div class="input-field">
+                                    {{ form_label(form.username) }}
+                                    {{ form_widget(form.username) }}
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                         <div class="col l6">
-                            <div class="container-fluid">
-                                <div id="rightPannel" class="row">
-                                    <div class="col s12">
-                                        <div class="subRech">
-                                            <div class="input-field">
-                                                {{ form_widget(form.password) }}
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="text-container">
+                                <div class="input-field">
+                                    {{ form_label(form.password) }}
+                                    {{ form_widget(form.password) }}
                                 </div>
                             </div>
                         </div>

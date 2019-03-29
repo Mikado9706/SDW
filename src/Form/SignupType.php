@@ -50,7 +50,10 @@ class SignupType extends AbstractType
                 ],
             ])
             ->add('signup', SubmitType::class, [
-                'label' => "S'inscrire"
+                'label' => "S'inscrire",
+                'attr' => [
+                    'class' => 'btn waves-effect waves-light white boutonValider'
+                ]
             ])
 
         ;

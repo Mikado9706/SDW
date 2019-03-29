@@ -6,7 +6,7 @@
         <div class="row blue">
             <div class="col l12">
                 <a href="{{ path('login') }}">Déjà inscrit ?</a>
-                <p>signup</p>
+                <p class="signup">SIGN UP</p>
                 {{ form_start(form) }}
                 {{ form_widget(form.lastname) }}
                 {{ form_widget(form.firstname) }}
@@ -14,9 +14,9 @@
                 {{ form_widget(form.birthDate) }}
                 {{ form_widget(form.password.first) }}
                 {{ form_widget(form.password.second) }}
-                {{ form_widget(form.signup) }}
                 {{ form_end(form) }}
             </div>
+              
         </div>
     </div>
 </main>

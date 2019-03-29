@@ -62,7 +62,14 @@ body {
     border-bottom: 0 !important;
   }
 
-  #search_search {
+  .validationForm {
+    color: #2699FB; 
+    border-style: solid; 
+    border-color: #2699FB;
+    border-radius: 5px;
+  }
+
+  .reset_reset {
     color: #2699FB; 
     border-style: solid; 
     border-color: #2699FB;
@@ -71,6 +78,7 @@ body {
 
   .form-container{
     padding: 0 5rem!important;
+    margin: 0 0 20px;
   }
 
   .form-container>.container-fluid>.row{
@@ -119,7 +127,6 @@ body {
     display: none;
   }
 
-
 /*s'insrire*/
 
 .signup{
@@ -157,3 +164,28 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 
 
+  .lien-connec {
+    color: #fff;
+  }
+  .text-container{
+    background-color: #fff;
+    padding: 1px 20px 0 20px!important;
+    margin-top: 20px;
+  }
+
+.text-container label{
+  color: #2196F3
+}
+
+.text-container input{
+  box-shadow: none!important;
+  border: none!important;
+}
+
+a{
+  color:#fff;
+}
+
+.link{
+  margin: 30px 0 10px;
+}

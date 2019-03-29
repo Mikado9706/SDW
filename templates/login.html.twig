@@ -4,16 +4,63 @@
 <main>
     <div class="container">
         <div class="row blue">
-            <div class="col l12">
-                <a href="{{ path('forgottenPassword') }}">Mot de passe oublié ?</a>
-                <a href="{{ path('signup') }}">Pas encore inscrit ?</a>
-                
-                {{ form_start(form) }}
-                {{ form_widget(form.username) }}
-                {{ form_widget(form.password) }}
-                {{ form_widget(form.search) }}
-                {{ form_end(form) }}
+            {{ form_start(form) }}
+            <div class="col l12 form-container">                
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col s12 l6 input-field">
+                            <a class="lien-connec" href="{{ path('forgottenPassword') }}">Mot de passe oublié ?</a>       
+                        </div>
+                        <div class="col s12 l6 input-field">
+                            <a class="lien-connec" href="{{ path('signup') }}">Pas encore inscrit ?</a>      
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="col l12 form-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col l6">
+                            <div class="container-fluid">
+                                <div id="leftPannel" class="row">
+                                    <div class="col s12">
+                                        <div class="subRech">
+                                            <div class="input-field">
+                                                {{ form_widget(form.username) }}
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l6">
+                            <div class="container-fluid">
+                                <div id="rightPannel" class="row">
+                                    <div class="col s12">
+                                        <div class="subRech">
+                                            <div class="input-field">
+                                                {{ form_widget(form.password) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>               
+            <div class="col l12 search-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col l12">
+                            <div class="search-button">
+                                {{ form_widget(form.search) }}
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            {{ form_end(form) }}
         </div>
     </div>
 </main>

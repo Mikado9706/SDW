@@ -16,14 +16,14 @@ class ForgottenPasswordType extends AbstractType
     {
         $builder
             ->add('email', TextType::class, [
-                'attr' => [
-                    'placeholder' => 'E-mail'
-                ]
-            ])
+                'label' => 'E-mail'
+                ])
             ->add('send', SubmitType::class, [
-                'label' => "Envoyer"
+                'label' => "Envoyer",
+                'attr' => [
+                    'class' => 'btn waves-effect waves-light white validationForm'
+                    ]
             ])
-
         ;
     }
 }

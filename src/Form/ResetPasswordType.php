@@ -30,7 +30,10 @@ class ResetPasswordType extends AbstractType
                 ],
             ])
             ->add('reset', SubmitType::class, [
-                'label' => "Réinitialiser"
+                'label' => "Réinitialiser",
+                'attr' => [
+                    'class' => 'btn waves-effect waves-light white reset_reset'
+                    ]
             ])
 
         ;

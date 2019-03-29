@@ -69,6 +69,13 @@ body {
     border-radius: 5px;
   }
 
+  .reset_reset {
+    color: #2699FB; 
+    border-style: solid; 
+    border-color: #2699FB;
+    border-radius: 5px;
+  }
+
   .form-container{
     padding: 0 5rem!important;
   }

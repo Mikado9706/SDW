@@ -16,43 +16,31 @@ class SignupType extends AbstractType
     {
         $builder
             ->add('lastname', TextType::class, [
-                'attr' => [
-                    'placeholder' => 'Nom'
-                ]
+                'label' => 'Nom'
             ])
             ->add('firstname', TextType::class, [
-                'attr' => [
-                    'placeholder' => 'Prénom'
-                ]
+                'label' => 'Prénom'
             ])
             ->add('email', EmailType::class, [
-                'attr' => [
-                    'placeholder' => 'E-mail'
-                ]
+                'label' => 'E-mail'
             ])
             ->add('birthDate', TextType::class, [
-                'attr' => [
-                    'placeholder' => 'Date de naissance'
-                ]
+                'label' => 'Date de naissance'
             ])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'invalid_message' => 'Les mots de passe ne correspondent pas.',
                 'first_options'  => [
-                    'attr' => [
-                        'placeholder' => 'Mot de passe'
-                    ]
+                    'label' => 'Mot de passe'
                 ],
                 'second_options' => [
-                    'attr' => [
-                        'placeholder' => 'Répéter votre mot de passe'
-                    ]
+                    'label' => 'Répéter votre mot de passe'
                 ],
             ])
             ->add('signup', SubmitType::class, [
                 'label' => "S'inscrire",
                 'attr' => [
-                    'class' => 'btn waves-effect waves-light white boutonValider'
+                    'class' => 'btn waves-effect waves-light white validationForm'
                 ]
             ])
 

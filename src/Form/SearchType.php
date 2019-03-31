@@ -42,39 +42,35 @@ class SearchType extends AbstractType
                     ]
                 ])
             ->add('formation', ChoiceType::class, [
+                'label' => 'Formations souhaitées',
                 'choices'  => [
-                    'Formation' => [
-                        'Bachelor WEB' => 'web_bachelor',
-                        'Master 1 360 Digital' => '360_digital_master1',
-                        'Master 2 360 Digital' => '360_digital_master2'
-                    ]
+                    'Bachelor WEB' => 'web_bachelor',
+                    'Master 1 360 Digital' => '360_digital_master1',
+                    'Master 2 360 Digital' => '360_digital_master2'
                 ]
                 ])
             ->add('location', ChoiceType::class, [
+                'label' => 'Villes souhaitées',
                 'choices'  => [
-                    'Location' => [
-                        'Nice' => 'nice',
-                        'Paris' => 'paris',
-                        'Lille' => 'lille'
-                    ]       
+                    'Nice' => 'nice',
+                    'Paris' => 'paris',
+                    'Lille' => 'lille'
                 ]
                 ])
             ->add('noFormation', ChoiceType::class, [
+                'label' => 'Formations non souhaitées',
                 'choices'  => [
-                    'Formation non souhaitée' => [
-                        'Bachelor WEB' => 'web_bachelor',
-                        'Master 1 360 Digital' => '360_digital_master1',
-                        'Master 2 360 Digital' => '360_digital_master2'
-                    ]                   
+                    'Bachelor WEB' => 'web_bachelor',
+                    'Master 1 360 Digital' => '360_digital_master1',
+                    'Master 2 360 Digital' => '360_digital_master2'
                 ]
                 ])
             ->add('noLocation', ChoiceType::class, [
+                'label' => 'Villes non souhaitées',
                 'choices'  => [
-                    'Location non souhaitée' => [
-                        'Nice' => 'nice',
-                        'Paris' => 'paris',
-                        'Lille' => 'lille'
-                    ]
+                    'Nice' => 'nice',
+                    'Paris' => 'paris',
+                    'Lille' => 'lille'
                 ]
                 ])
             ->add('search', SubmitType::class, [

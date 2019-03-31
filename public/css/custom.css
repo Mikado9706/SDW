@@ -19,6 +19,10 @@ main {
   margin-bottom: 0;
 }
 
+.copyrights{
+  font-size: 1rem;
+}
+
 .social-network{
   text-align: center;
 }
@@ -41,9 +45,8 @@ main {
   margin-left: -12px;
 }
 
-
-.copyrights{
-  font-size: 1rem;
+.subSelect{
+  margin: 0;
 }
 
 .subSelect input {
@@ -53,12 +56,43 @@ main {
 
 .subRech {
   background-color: white;
-  padding-left: 1rem;   
+  padding-left: 1rem;
+}
+
+.subRech .select-wrapper input.select-dropdown{
+  padding: 4px 0; 
+}
+
+.subRech .select-wrapper+label{
+  color: #fff;
+  top: -40px;
+  font-size: 15px;
+}
+
+.form-container{
+  padding: 0 5rem!important;
+  margin: 20px 0;
+}
+
+.form-container>.container-fluid>.row, .form-container>.container-fluid>.row>.col>.container-fluid>.row{
+  margin-bottom: 0;
+}
+
+.form-container .row{
+  margin-top: 20px;
+}
+
+.form-container .row:first-child{
+  margin-top: 0;
 }
 
 .subRech input {
   color: #2699FB;
   border-bottom: 0 !important;
+}
+
+.notSearch{
+  margin-top: 30px;
 }
 
 .validationForm {
@@ -73,19 +107,14 @@ main {
   font-weight: 500;
 }
 
-.form-container{
-  padding: 0 5rem!important;
-  margin: 20px 0;
-}
-
-.form-container>.container-fluid>.row{
-  margin-bottom: 0;
-}
-
 .search-section{
   margin-bottom: -35px;
   text-align: center;
   margin-top: 20px;
+}
+
+.subRech-container{
+  margin-top: 40px;
 }
 
 .etc-container{
@@ -94,7 +123,7 @@ main {
 
 .etc-wrapper {
   float: right;
-  margin-top: 15px;
+  margin-top: 45px;
   margin-right: 15px;
 }
 
@@ -131,8 +160,12 @@ main {
   margin-top: 20px;
 }
 
-.text-container .input-field{
+.text-container .input-field, .subRech .input-field{
   margin: 0;
+}
+
+.text-container .input-field input{
+  margin: 4px 0;
 }
 
 .text-container .input-field>label:not(.label-icon).active{

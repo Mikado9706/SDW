@@ -120,11 +120,9 @@ body {
     display: none;
   }
 
-<<<<<<< HEAD
   .lien-connec {
     color: #fff;
   }
-=======
   .text-container{
     background-color: #fff;
     padding: 1px 20px 0 20px!important;
@@ -146,5 +144,4 @@ a{
 
 .link{
   margin: 30px 0 10px;
-}
->>>>>>> 9d4fb2b16530dbd4da94b7575cb26641fc09b91d
+} 

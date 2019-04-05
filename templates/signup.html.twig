@@ -4,19 +4,86 @@
 <main>
     <div class="container">
         <div class="row blue">
-            <div class="col l12">
-                <a href="{{ path('login') }}">Déjà inscrit ?</a>
-                <p>signup</p>
-                {{ form_start(form) }}
-                {{ form_widget(form.lastname) }}
-                {{ form_widget(form.firstname) }}
-                {{ form_widget(form.email) }}
-                {{ form_widget(form.birthDate) }}
-                {{ form_widget(form.password.first) }}
-                {{ form_widget(form.password.second) }}
-                {{ form_widget(form.signup) }}
-                {{ form_end(form) }}
+            {{ form_start(form) }}
+            <div class="col l12 form-container link">                
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col s12 l6 input-field">
+                            <a href="{{ path('forgottenPassword') }}">Déjà inscrit ?</a>       
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="col l12 form-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col l6">
+                            <div class="text-container">
+                                <div class="input-field">
+                                    {{ form_label(form.lastname) }}
+                                    {{ form_widget(form.lastname) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l6">
+                            <div class="text-container">
+                                <div class="input-field">
+                                    {{ form_label(form.firstname) }}
+                                    {{ form_widget(form.firstname) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col l6">
+                            <div class="text-container">
+                                <div class="input-field">
+                                    {{ form_label(form.birthDate) }}
+                                    {{ form_widget(form.birthDate) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l6">
+                            <div class="text-container">
+                                <div class="input-field">
+                                    {{ form_label(form.email) }}
+                                    {{ form_widget(form.email) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col l6">
+                            <div class="text-container">
+                                <div class="input-field">
+                                    {{ form_label(form.password.first) }}
+                                    {{ form_widget(form.password.first) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l6">
+                            <div class="text-container">
+                                <div class="input-field">
+                                    {{ form_label(form.password.second) }}
+                                    {{ form_widget(form.password.second) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>               
+            <div class="col l12 search-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col l12">
+                            <div class="search-button">
+                                {{ form_widget(form.signup) }}
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            {{ form_end(form) }}
         </div>
     </div>
 </main>

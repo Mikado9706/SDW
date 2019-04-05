@@ -34,16 +34,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col l12 form-container">
+            <div class="col l12 form-container subRech-container">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col l6">
                             <div class="container-fluid">
-                                <div id="leftPannel" class="row">
+                                <div class="row">
                                     <div class="col s12">
                                         <div class="subRech">
                                             <div class="input-field">
                                                 {{ form_widget(form.formation) }}
+                                                {{ form_label(form.formation) }}
                                             </div>
                                         </div>
                                     </div>
@@ -51,6 +52,7 @@
                                         <div class="subRech">
                                             <div  class="input-field">
                                                 {{ form_widget(form.noFormation) }}
+                                                {{ form_label(form.noFormation) }}
                                             </div>
                                         </div>
                                     </div>                        
@@ -59,18 +61,20 @@
                         </div>
                         <div class="col l6">
                             <div class="container-fluid">
-                                <div id="rightPannel" class="row">
-                                    <div class="col s12 notSearch disabled">
-                                        <div class="subRech">
-                                            <div class="input-field">
-                                                {{ form_widget(form.location) }} 
-                                            </div>
-                                        </div> 
-                                    </div>
+                                <div class="row">
                                     <div class="col s12">
                                         <div class="subRech">
                                             <div class="input-field">
+                                                {{ form_widget(form.location) }} 
+                                                {{ form_label(form.location) }}
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="col s12 notSearch disabled">
+                                        <div class="subRech">
+                                            <div class="input-field">
                                                 {{ form_widget(form.noLocation) }}
+                                                {{ form_label(form.noLocation) }}
                                             </div>
                                         </div>
                                     </div>

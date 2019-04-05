@@ -4,21 +4,98 @@
 <main>
     <div class="container">
         <div class="row blue">
-            <div class="col l12">
-                <p>search</p>
-                
                 {{ form_start(form) }}
-                {{ form_widget(form.alternation) }}
-                {{ form_widget(form.backToSchool) }}
-                {{ form_widget(form.level) }}
-                {{ form_widget(form.rncp) }}
-                {{ form_widget(form.formation) }}
-                {{ form_widget(form.location) }}
-                {{ form_widget(form.noFormation) }}
-                {{ form_widget(form.noLocation) }}
-                {{ form_widget(form.search) }}
-                {{ form_end(form) }}
+            <div class="col l12 form-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="input-field subSelect col s12 l3">
+                            {{ form_widget(form.alternation) }}
+                        </div>
+                        <div class="input-field subSelect col s12 l3">
+                            {{ form_widget(form.backToSchool) }}
+                        </div>
+                        <div class="input-field subSelect col s12 l3">    
+                            {{ form_widget(form.level) }}
+                        </div>
+                        <div class="input-field subSelect col s12 l3">
+                            {{ form_widget(form.rncp) }}
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="col l12 etc-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="etc-wrapper">
+                            <div class="etc">
+                                <span>...</span>
+                            </div>  
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="col l12 form-container subRech-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col l6">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="subRech">
+                                            <div class="input-field">
+                                                {{ form_widget(form.formation) }}
+                                                {{ form_label(form.formation) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 notSearch disabled">
+                                        <div class="subRech">
+                                            <div  class="input-field">
+                                                {{ form_widget(form.noFormation) }}
+                                                {{ form_label(form.noFormation) }}
+                                            </div>
+                                        </div>
+                                    </div>                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l6">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="subRech">
+                                            <div class="input-field">
+                                                {{ form_widget(form.location) }} 
+                                                {{ form_label(form.location) }}
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="col s12 notSearch disabled">
+                                        <div class="subRech">
+                                            <div class="input-field">
+                                                {{ form_widget(form.noLocation) }}
+                                                {{ form_label(form.noLocation) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l12 search-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col l12">
+                            <div class="search-button">
+                                {{ form_widget(form.search) }}
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            {{ form_end(form) }}
         </div>
     </div>
 </main>

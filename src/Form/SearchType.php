@@ -74,6 +74,15 @@ class SearchType extends AbstractType
                     'Lille' => 'lille'
                 ]
                 ])
+                
+            ->add('searchType', ChoiceType::class, [
+                'label' => 'Préférence de tri',
+                'choices'  => [
+                    'Pertinence' => 'pertinence',
+                    'A -> Z' => 'az',
+                    'Z -> A' => 'za',
+                ]
+                ])
             ->add('search', SubmitType::class, [
                 'label' => 'Rechercher',
                 'attr' => [

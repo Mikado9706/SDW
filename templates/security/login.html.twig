@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main>
+
+    <div class="container">
+        <div class="row blue">
+            {{ form_start(form) }}
+            {% if error %}
+                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            <div class="col l12 form-container link">                
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col s12 l6 input-field">
+                            <a href="{{ path('forgottenPassword') }}">Mot de passe oublié ?</a>       
+                        </div>
+                        <div class="col s12 l6 input-field">
+                            <a href="{{ path('signup') }}">Pas encore inscrit ?</a>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l12 m12 form-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col l6 m6 s12">
+                            <div class="text-container">
+                                <div class="input-field">
+                                    {{ form_label(form.username) }}
+                                    {{ form_widget(form.username) }}
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col l6 m6 s12">
+                            <div class="text-container">
+                                <div class="input-field">
+                                    {{ form_label(form.password) }}
+                                    {{ form_widget(form.password) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>               
+            <div class="col l12 m12 s12 search-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col l12">
+                            <div class="search-button">
+                                {{ form_widget(form.search) }}
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"
+            >
+            {{ form_end(form) }}
+        </div>
+    </div>
+</main>
+{% endblock %}

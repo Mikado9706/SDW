@@ -13,13 +13,22 @@ class LoginType extends AbstractType
     {
         $builder
             ->add('username', TextType::class, [
-                'label' => 'Identifiant'
+                'label' => 'Identifiant',
+                'type' => 'email',
+                'name' => 'email',
+                'id' => 'inputEmail',
+                'placeholder' => 'Email'
             ])
             ->add('password', PasswordType::class, [
-                'label' => 'Mot de passe'
+                'label' => 'Mot de passe',
+                'type' => 'password',
+                'name' => 'password',
+                'id' => 'inputPassword',
+                'placeholder' => 'Password'
             ])
             ->add('search', SubmitType::class, [
                 'label' => "Se connecter",
+                'type' => 'submit',
                 'attr' => [
                     'class' => 'btn waves-effect waves-light white validationForm'
                     ]

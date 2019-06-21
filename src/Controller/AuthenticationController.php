@@ -8,36 +8,39 @@ use App\Form\SignupType;
 use App\Form\ForgottenPasswordType;
 use App\Form\ResetPasswordType;
 use Symfony\Component\HttpFoundation\Request;
+use App\Entity\User;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class AuthenticationController extends AbstractController {
 
     /**
-     * @Route("/connexion", name="login")
-     */
-    public function login(Request $request){
-        $form = $this->createForm(LoginType::class);
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $task = $form->getData();
-        }
-
-        return $this->render('login.html.twig', [
-            'form' => $form->createView(),
-        ]);
-    }
-
-    /**
      * @Route("/inscription", name="signup")
      */
-    public function signup(Request $request){
+    public function signup(Request $request, UserPasswordEncoderInterface $encoder){
         $form = $this->createForm(SignupType::class);
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $task = $form->getData();
+            $formUser = $form->getData();
+
+            $dateConverter = new DateConverter();
+
+            $date = $this->forward('App\Controller\DateConverter::euToUs', [
+                'date'  => $formUser['birthDate']
+            ]);
+
+            $user = new User();
+            $user->setLastname($formUser['lastname']);
+            $user->setFirstname($formUser['firstname']);
+            $user->setEmail($formUser['email']);
+            $user->setBirthdate($date->getContent());
+            $user->setPassword($encoder->encodePassword($user, $formUser['password']));
+
+            $entityManager = $this->getDoctrine()->getManager();
+
+            $entityManager->persist($user);
+            $entityManager->flush();
         }
 
         return $this->render('signup.html.twig', [

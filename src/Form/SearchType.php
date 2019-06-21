@@ -13,6 +13,7 @@ class SearchType extends AbstractType
         $builder
             ->add('alternation', ChoiceType::class, [
                 'choices'  => [
+                    'En apprentissage' => 'apprentissage',
                     'En alternance' => 'alternation',
                     'En initiale' => 'initial'
                     ]
@@ -50,7 +51,7 @@ class SearchType extends AbstractType
                 ]
                 ])
             ->add('location', ChoiceType::class, [
-                'label' => 'Villes souhaitées',
+                'label' => 'Regions/Villes souhaitées',
                 'choices'  => [
                     'Nice' => 'nice',
                     'Paris' => 'paris',
@@ -66,7 +67,7 @@ class SearchType extends AbstractType
                 ]
                 ])
             ->add('noLocation', ChoiceType::class, [
-                'label' => 'Villes non souhaitées',
+                'label' => 'Regions/Villes non souhaitées',
                 'choices'  => [
                     'Nice' => 'nice',
                     'Paris' => 'paris',
